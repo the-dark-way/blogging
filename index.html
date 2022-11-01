@@ -3,15 +3,78 @@ layout: home
 search_exclude: true
 image: images/logo.png
 ---
-
+<div class="mainitems">
 <div class="description">
-    <p>Make school easier with this tool!</p>
-    <p>Need help with memorization or flashcards from any class? Try quizme! You can input terms and practice with flashcards or do practice tests.</p>
-    <button class = "flashcards-btn">Starts Learning!</button>
+    <p class="first-head">Make school easier with this tool!</p>
+    <p class="desc-text">Need help with memorization or flashcards from any class? Try quizme! You can input terms and practice with flashcards or do practice tests.</p>
+    <div class="buttons">
+    <button class = "flashcards-btn">Start Learning!</button>
     <button class = "flashcards-btn">Watch Now!</button>
+    </div>
 </div>
 
 
 <div class="image">
-    
+    <img src="././images/logo.png" width = 200% height: auto class="logo">
 </div>
+</div>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+    .description {
+        width: 30%;
+        height: 20%;
+        float: left;
+        margin-top: 10%;
+        margin-left: 20%;
+        font-family: 'Roboto', sans-serif;
+        color: White;
+    }
+    .first-head {
+        font-size: 45px;
+        font-weight: bold;
+        margin-left: 10%;
+        margin-top: 10%;
+    }
+    .desc-text {
+        font-size: 25px;
+        margin-left: 10%;
+        margin-top: -6%;
+    }
+
+    .buttons button {
+        align-content: center;        
+        margin-left: 10%;
+        margin-top: 2%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+        padding-left: 5%;
+        padding-right: 5%;
+        border: 1px solid rgb(128, 120, 120);
+        font-family: 'Roboto', sans-serif;
+        font-size: 20px;
+        letter-spacing: 1px;
+        font-weight: bold;
+        background-color: rgb(128, 120, 120);
+        color: white;
+    }
+
+    .image{
+        float: right;
+        margin-top: 10%;
+        margin-right: 35%;
+    }
+
+    .mainitems{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+ 
+
+
+
+
+</style>
