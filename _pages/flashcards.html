@@ -16,7 +16,11 @@ search_exclude: false
 <body>
 
   <main>
+    <div id="reload">
+      <button class="btn" id="refresh"><i class="fas fa-sync-alt"></i></button>
+    </div>
     <div class="container">
+      
       <div id="flashcards">
         <div class="card">
           <div class="front">
@@ -31,7 +35,7 @@ search_exclude: false
       <script>
         const front = document.getElementById('front')
         const back = document.getElementById('back')
-        fetch(`https://quizme.nighthawkcoders.tk/test`, { method: 'GET', }).then(res => {
+        fetch(`https://quizme.nighthawkcoders.tk/test2`, { method: 'GET', }).then(res => {
             return res.text();
         }).then(html => {
           console.log(html)
@@ -72,6 +76,11 @@ search_exclude: false
             setTimeout(hideBack, 300)
           }
         })
+
+        const refresh = document.getElementById('refresh')
+        refresh.addEventListener('click', () => {
+          location.reload()
+        })
       </script>
     </script>
       
@@ -87,7 +96,6 @@ search_exclude: false
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
   }
   .card {
     font-family: 'Roboto', sans-serif;
@@ -114,6 +122,27 @@ search_exclude: false
     font-size: 1rem;
     text-align:center;
     font-weight:lighter;
+  }
+
+  #reload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:10%;
+    margin-bottom: 2%;
+  }
+  .btn {
+    font-size: 50px;
+    background: rgba(255, 238, 218, 0);
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    color: rgb(224, 224, 224);
+    cursor: pointer;
+    transition: 0.6s;
+  }
+  .btn:hover {
+    transform: rotate(360deg);
   }
 </style>
 
