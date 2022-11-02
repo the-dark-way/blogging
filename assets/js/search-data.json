@@ -17,7 +17,7 @@
 
   
       ,"page2": {
-          "title": "",
+          "title": "Help",
           "content": "Help .",
           "url": "https://the-dark-way.github.io/quizme/help",
           "relUrl": "/help",
@@ -51,7 +51,7 @@
 
   
       ,"page9": {
-          "title": "",
+          "title": "Test",
           "content": "Test .",
           "url": "https://the-dark-way.github.io/quizme/test",
           "relUrl": "/test",
