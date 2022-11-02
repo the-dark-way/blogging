@@ -48,7 +48,11 @@ search_exclude: false
     
     <section>
       <script>
-        fetch("https://quizme.nighthawkcoders.tk/test").then(body => body.json()).(json => console.log(json))
+        fetch("https://quizme.nighthawkcoders.tk/test").then(body => body.json())
+        .then(json => {
+          console.log(json)
+        })
+        
       </script>
     </section>
       
