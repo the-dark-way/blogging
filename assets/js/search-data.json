@@ -52,7 +52,7 @@
   
       ,"page9": {
           "title": "Test",
-          "content": "Test .",
+          "content": ". layout: default permalink: /quiz.html title: Quiz — . How many bones are in the human body? . 96 | 193 | 206 | 309 | . | How many states are there in America? . 48 | 50 | 52 | 60 | . | What year did World War II end? . 1896 | 1918 | 1942 | 1945 | . | . Check Your score is -/3 .",
           "url": "https://the-dark-way.github.io/quizme/test",
           "relUrl": "/test",
           "date": ""
