@@ -113,12 +113,17 @@ window.onload = wrap_img;
     
     <section>
       <script>
-        fetch("https://quizme.nighthawkcoders.tk/test").then(body => body.json())
-        .then(json => {
-          console.log(json)
+        const test = document.getElementById('test');
+        fetch(`https://quizme.nighthawkcoders.tk/test`, { method: 'GET', }).then(res => {
+            return res.text();
+        }).then(html => {
+            console.log(html)
         })
-        
-      </script>
+        .catch(function (err) {
+      // There was an error
+      console.warn('Something went wrong.', err);
+    });
+    </script>
     </section>
       
 
