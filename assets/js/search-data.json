@@ -7,7 +7,7 @@
   
       "page1": {
           "title": "Flashcards",
-          "content": "&lt;!DOCTYPE html&gt; . Flashcards . Flashcards . Add Card Del Cards . Create Flashcard . Question Answer Save Close .",
+          "content": "&lt;!DOCTYPE html&gt; . Flashcards . . . &lt;/script&gt; &lt;/main&gt; &lt;/body&gt; &lt;/html&gt; .",
           "url": "https://the-dark-way.github.io/quizme/flashcards/",
           "relUrl": "/flashcards/",
           "date": ""
@@ -18,7 +18,7 @@
   
       ,"page2": {
           "title": "Help",
-          "content": "Help .",
+          "content": "Where can I find an example quiz? . Click on the Test at the Top Right For more details, refer to the video tutorial. . How do I create an account? . Refer to the top right of the page and click Login and create an account from there. . How do I add flashcards . Make sure to type in both a term and definition into the tool and press save. For more details, refer to the video tutorial. .",
           "url": "https://the-dark-way.github.io/quizme/help",
           "relUrl": "/help",
           "date": ""
