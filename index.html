@@ -77,15 +77,37 @@ window.onload = wrap_img;
     <p class="desc-text">Need help with memorization or flashcards from any class? Try quizme! You can input terms and practice with flashcards or do practice tests.</p>
     <div class="buttons">
     <button class="flashcards-btn">Start Learning!</button>
-    <button class="flashcards-btn">Watch Now!</button>
+    <button class="start-btn">Watch Now!</button>
     </div>
 </div>
-
 
 <div class="image">
     <img src="././images/purple_logo.png" class="logo" />
 </div>
 </div>
+
+<script>
+    var flashcards = document.querySelector(".flashcards-btn");
+    flashcards.addEventListener("hover", function() {
+        //change the background color of the button
+        flashcards.style.backgroundColor = "#6B6B6B";
+        flashcards.style.transition = "ease-in 0.5s";
+    })
+    flashcards.addEventListener("click", function() {
+        window.location.href = "https://the-dark-way.github.io/quizme/flashcards";
+    });
+
+    var start = document.querySelector(".start-btn");
+    start.addEventListener("hover", function() {
+        //change the background color of the button
+        start.style.backgroundColor = "#6B6B6B";
+        start.style.transition = "ease-in 0.5s";
+    })
+    start.addEventListener("click", function() {
+        window.location.href = "https://the-dark-way.github.io/quizme/start";
+    });
+
+</script>
 
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
