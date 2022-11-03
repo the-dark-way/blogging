@@ -4,20 +4,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Login | quizme</title>
+<title>Video | quizme</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Login" />
+<meta property="og:title" content="Video" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="An intuitive study tool for students" />
 <meta property="og:description" content="An intuitive study tool for students" />
-<link rel="canonical" href="https://the-dark-way.github.io/quizme/login/" />
-<meta property="og:url" content="https://the-dark-way.github.io/quizme/login/" />
+<link rel="canonical" href="https://the-dark-way.github.io/quizme/video/" />
+<meta property="og:url" content="https://the-dark-way.github.io/quizme/video/" />
 <meta property="og:site_name" content="quizme" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Login" />
+<meta property="twitter:title" content="Video" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"An intuitive study tool for students","headline":"Login","url":"https://the-dark-way.github.io/quizme/login/"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"An intuitive study tool for students","headline":"Video","url":"https://the-dark-way.github.io/quizme/video/"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/quizme/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://the-dark-way.github.io/quizme/feed.xml" title="quizme" /><link rel="shortcut icon" type="image/x-icon" href="/quizme/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -69,207 +69,19 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <!DOCTYPE html>
-<html lang="en" dir="ltr">
-   <head>
-      <meta charset="utf-8">
-      <title>Code Signup </title>
-      <link rel="stylesheet" href="login.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-   </head>
-   <body>
-      <div class="bg-img">
-         <div class="content">
-            <header>Login</header>
-            <form action="#">
-               <div class="field">
-                  <span class="fa fa-user"></span>
-                  <input type="text" required placeholder="Email or Phone">
-               </div>
-               <div class="field space">
-                  <span class="fa fa-lock"></span>
-                  <input type="password" class="pass-key" required placeholder="Password">
-                  <span class="show">SHOW</span>
-               </div>
-               <div class="field">
-                  <input type="submit" value="LOGIN">
-               </div>
-            </form>
-            </div>
-            <div class="signup">
-               Don't have account?
-               <a href="#">Signup Now</a>
-         </div>  
-      </div>
-      <script>
-         const pass_field = document.querySelector('.pass-key');
-         const showBtn = document.querySelector('.show');
-         showBtn.addEventListener('click', function(){
-          if(pass_field.type === "password"){
-            pass_field.type = "text";
-            showBtn.textContent = "HIDE";
-            showBtn.style.color = "#3498db";
-          }else{
-            pass_field.type = "password";
-            showBtn.textContent = "SHOW";
-            showBtn.style.color = "#222";
-          }
-         });
-      </script>
-   </body>
+        <iframe id = "loom" src="https://www.loom.com/embed/2d82c7b361f34d3fb9fa6564f227c25f" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen ></iframe>
+
 
 <style>
-   @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  user-select: none;
-}
-.bg-img{
-  background: url('bg.jpg');
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-}
-.bg-img:after{
-  position: absolute;
-  content: '';
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-}
-.content{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 999;
-  text-align: center;
-  padding: 60px 32px;
-  width: 370px;
-  transform: translate(-50%,-50%);
-  background: rgba(255,255,255,0.04);
-  box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
-}
-.content header{
-  color: white;
-  font-size: 33px;
-  font-weight: 600;
-  margin: 0 0 35px 0;
-  font-family: 'Montserrat',sans-serif;
-}
-.field{
-  position: relative;
-  height: 45px;
-  width: 100%;
-  display: flex;
-  background: rgba(255,255,255,0.94);
-}
-.field span{
-  color: #222;
-  width: 40px;
-  line-height: 45px;
-}
-.field input{
-  height: 100%;
-  width: 100%;
-  background: transparent;
-  border: none;
-  outline: none;
-  color: #222;
-  font-size: 16px;
-  font-family: 'Poppins',sans-serif;
-}
-.space{
-  margin-top: 16px;
-}
-.show{
-  position: absolute;
-  right: 13px;
-  font-size: 13px;
-  font-weight: 700;
-  color: #222;
-  display: none;
-  cursor: pointer;
-  font-family: 'Montserrat',sans-serif;
-}
-.pass-key:valid ~ .show{
-  display: block;
-}
-.pass{
-  text-align: left;
-  margin: 10px 0;
-}
-.pass a{
-  color: white;
-  text-decoration: none;
-  font-family: 'Poppins',sans-serif;
-}
-.pass:hover a{
-  text-decoration: underline;
-}
-.field input[type="submit"]{
-  background: #3498db;
-  border: 1px solid #2691d9;
-  color: white;
-  font-size: 18px;
-  letter-spacing: 1px;
-  font-weight: 600;
-  cursor: pointer;
-  font-family: 'Montserrat',sans-serif;
-}
-.field input[type="submit"]:hover{
-  background: #2691d9;
-}
-.login{
-  color: white;
-  margin: 20px 0;
-  font-family: 'Poppins',sans-serif;
-}
-.links{
-  display: flex;
-  cursor: pointer;
-  color: white;
-  margin: 0 0 20px 0;
-}
-i span{
-  margin-left: 8px;
-  font-weight: 500;
-  letter-spacing: 1px;
-  font-size: 16px;
-  font-family: 'Poppins',sans-serif;
-}
-.signup{
-  font-size: 15px;
-  color: white;
-  font-family: 'Poppins',sans-serif;
-}
 
-.signup a{
-  color: #ffffff;
-  text-decoration: none;
-}
-.signup a:hover{
-  text-decoration: underline;
-}
-
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(0, 0, 0, 0.6);
-  color: white;
-  text-align: center;
-}
-
+    #loom{
+        width: 50%;
+        height: 50%;
+        margin: 0 auto;
+        display: block;
+        box-shadow: 0 0 3px 3px rgb(245, 245, 245);
+    }
 </style>
-
-
-</html>
-
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/quizme/"></data>
