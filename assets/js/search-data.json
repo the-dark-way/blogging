@@ -7,7 +7,7 @@
   
       "page1": {
           "title": "Flashcards",
-          "content": "&lt;!DOCTYPE html&gt; . Flashcards . . . &lt;/script&gt; &lt;/main&gt; &lt;/body&gt; &lt;/html&gt; .",
+          "content": "&lt;!DOCTYPE html&gt; . Flashcards . . . . . &lt;/script&gt; .",
           "url": "https://the-dark-way.github.io/quizme/flashcards/",
           "relUrl": "/flashcards/",
           "date": ""
