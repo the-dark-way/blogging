@@ -16,12 +16,16 @@ search_exclude: false
 <body>
 
   <main>
+    <span id="ruler"></span>
     <div id="reload">
       <button class="btn" id="refresh"><i class="fas fa-sync-alt"></i></button>
     </div>
     <div class="container">
-      
       <div id="flashcards">
+        <div class="topic">
+        <p class="leftSide"></p>
+        <p class="rightSide"></p>
+      </div>
         <div class="card">
           <div class="front">
             <h2 id="front"></h2>
@@ -30,24 +34,41 @@ search_exclude: false
             <h2 id="back"></h2>
           </div>
       </div>
-    </div>
+  </div>
+  </div>
     
       <script>
+        function splitString(string){
+          if(string.toLowerCase().includes('set')){
+            string = string.replace(' Set', '') ?? string.replace(' set', '');
+          }
+          if(string.toLowerCase().includes('ap')){
+            string = string.replace('AP', 'AP ');
+          }
+          //split the string in half based on the number of characters it has. If it has a space, split it there. If it doesn't, split it in half.
+          let split = string.includes(' ') ? string.split(' ') : [string.slice(0, Math.ceil(string.length / 2)), string.slice(Math.ceil(string.length / 2))];
+          const firstHalf = split[0];
+          const secondHalf = split[1];
+          return [firstHalf, secondHalf];
+        }
         const front = document.getElementById('front')
         const back = document.getElementById('back')
+        const leftSide = document.querySelector('.leftSide')
+        const rightSide = document.querySelector('.rightSide')
         fetch(`https://quizme.nighthawkcoders.tk/test`, { method: 'GET', }).then(res => {
             return res.text();
         }).then(html => {
-          console.log(html)
           const htmlArray = JSON.parse(html) //converts data received into an JSON obj
-          const lastElementId = htmlArray[htmlArray.length - 1].id //gets the last element id in the array
-          const randomId = Math.floor(Math.random() * lastElementId) + 1 //random id number between 1 and lastElementId
-          const randomElement = htmlArray.find(element => element.id === randomId) //finds the element with the random id
-          //randomElement.flashcards is an object. get the first key and assign it to front
-          front.innerHTML = Object.keys(randomElement.flashcards)[0]
-          back.innerHTML = Object.values(randomElement.flashcards)[0]
+          const randomTopic = htmlArray[Math.floor(Math.random() * (htmlArray.length - 1))]
+          const randomId = Math.floor(Math.random() * randomTopic.flashcards.length) //random id number between 0 and lastElementId
+          const randomElement = randomTopic.flashcards[randomId] //gets the last element id in the array
+          front.innerHTML = randomElement.term
+          back.innerHTML = randomElement.definition
+          leftSide.innerHTML = splitString(randomTopic.name)[0]
+          rightSide.innerHTML = splitString(randomTopic.name)[1]
           back.style.display = 'none';
         })
+
         .catch(function (err) {
       // There was an error
       console.warn('Something went wrong.', err);
@@ -56,7 +77,6 @@ search_exclude: false
 
         const card = document.querySelector('.card')
         card.addEventListener('click', () => {
-          card.classList.toggle('flip')
           if (back.style.display === 'none') {
             front.style.display = 'none';
             card.style.transform = 'rotateY(180deg)'
@@ -76,7 +96,13 @@ search_exclude: false
             setTimeout(hideBack, 300)
           }
         })
-
+        console.log(rightSide.offsetWidth)
+        if(leftSide.style.width > rightSide.style.width){
+          console.log('a')
+          while(leftSide.offsetWidth > rightSide.offsetWidth){
+            rightSide.style.fontSize = `${parseInt(rightSide.style.fontSize) - 1}px`
+          }
+        }
         const refresh = document.getElementById('refresh')
         refresh.addEventListener('click', () => {
           location.reload()
@@ -90,7 +116,43 @@ search_exclude: false
 
 <style>
  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 
+ #ruler { visibility: hidden; white-space: nowrap; }
+
+  #flashcards {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* style the text in topic to be behind the card. The text should be just outside the card*/
+  .topic {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 92%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  .leftSide {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10rem;
+    color: rgb(0, 0, 0);
+    margin-left: -16rem;
+    letter-spacing: 1.5rem;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+  }
+  .rightSide {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10rem;
+    color: rgb(0, 0, 0);
+    margin-right: -21rem;
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+  }
 
   .container {
     display: flex;
