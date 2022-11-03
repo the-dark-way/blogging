@@ -61,14 +61,6 @@
   
 
   
-      ,"page10": {
-          "title": "Video",
-          "content": "",
-          "url": "https://the-dark-way.github.io/quizme/video/",
-          "relUrl": "/video/",
-          "date": ""
-      }
-      
   
 
   
@@ -78,10 +70,7 @@
   
 
   
-  
-
-  
-      ,"page14": {
+      ,"page13": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://the-dark-way.github.io/quizme/robots.txt",
