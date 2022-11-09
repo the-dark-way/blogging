@@ -3,7 +3,7 @@ layout: home
 search_exclude: true
 image: images/logo.png
 ---
-<p> LIMITED TIME DISCOUNT 50% OFF </p>
+<p class="discount"> LIMITED TIME DISCOUNT 50% OFF </p>
 <p id="demo"></p>
 <script>
 // Set the date we're counting down to
@@ -34,8 +34,6 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
-</script>
-
 </script>
 <div class="mainitems">
 <div class="description">
@@ -81,6 +79,14 @@ var x = setInterval(function() {
         font-weight: bold;
         margin-left: 10%;
         margin-top: 10%;
+    }
+    .discount {
+      color: Yellow;
+      font-size: 30px;
+      font-weight: bold;
+      margin-left: 10%;
+      margin-top: 10%;
+      
     }
     .desc-text {
         font-size: 25px;
